@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 d-flex justify-content-end">
+      <app-banner></app-banner>
+    </div>
+
+    <div class="col-sm-6 d-flex justify-content-start">
+      <div *ngIf="cadastro === true">
+        <app-cadastro (exibePainel)="exibePainelLogin($event)"></app-cadastro>
+      </div>
+      <div *ngIf="cadastro === false">
+        <app-login (exibePainel)="exibePainel($event)"></app-login>
+      </div>
+    </div>  
+  </div>
+</div>
